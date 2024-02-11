@@ -1,0 +1,49 @@
+name: Manual dispatch
+on:
+  workflow_dispatch:
+jobs:
+  version:
+    name: Get version numbers
+    uses: kuba2k2/kuba2k2/.github/workflows/version.yml@master
+
+  abuild:
+    name: Build Alpine Linux packages
+    uses: kuba2k2/kuba2k2/.github/workflows/abuild.yml@master
+    strategy:
+      matrix:
+        arch:
+          - x86
+          - x86_64
+          - armhf
+          - armv7
+          - aarch64
+    secrets:
+      ABUILD_KEYNAME: ${{ secrets.ABUILD_KEYNAME }}
+      ABUILD_PRIVKEY: ${{ secrets.ABUILD_PRIVKEY }}
+      ABUILD_PUBKEY: ${{ secrets.ABUILD_PUBKEY }}
+    with:
+      arch: ${{ matrix.arch }}
+      branch: edge
+      extra-repositories: |
+        http://dl-cdn.alpinelinux.org/alpine/edge/testing
+      packages: >
+        build-base
+        platformio-core
+        py3-packaging
+      build: |
+        cd openhasp-fbdev/
+        abuild -r
+        cd ../openhasp-sdl/
+        abuild -r
+
+  gh-release:
+    name: Publish GitHub release
+    needs:
+      - version
+      - abuild
+    uses: kuba2k2/kuba2k2/.github/workflows/gh-release.yml@master
+    permissions:
+      contents: write
+    with:
+      artifact: ${{ needs.abuild.outputs.artifact }}
+      name: v${{ needs.version.outputs.git-long }}

@@ -1,0 +1,32 @@
+{
+	"mqtt": {
+		"host": "localhost",
+		"port": 1883,
+		"user": "",
+		"pass": "",
+		"group": "plates"
+	},
+	"gui": {
+		"idle1": 60,
+		"idle2": 120,
+		"cursor": 0,
+		"fps": 60
+	},
+	"posix": {
+		"fbdev": "fb0",
+		"evdevs": [
+			"event0"
+		],
+		"bldev": "",
+		"blmax": 1000
+	},
+	"hasp": {
+		"startdim": 255,
+        "startpage": 1,
+        "theme": 2,
+        "color1": "#c86464",
+        "color2": "#c86464",
+        "font": "",
+		"pages": "/pages.jsonl"
+	}
+}

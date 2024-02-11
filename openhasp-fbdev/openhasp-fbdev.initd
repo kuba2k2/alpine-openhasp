@@ -1,0 +1,7 @@
+#!/sbin/openrc-run
+
+name="openHASP fbdev"
+command="/usr/bin/openhasp-fbdev"
+command_args="-c /usr/share/hasp"
+supervisor="supervise-daemon"
+

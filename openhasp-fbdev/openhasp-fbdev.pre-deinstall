@@ -1,0 +1,4 @@
+#!/bin/sh
+
+service openhasp-fbdev stop
+rc-update del -aq openhasp-fbdev
