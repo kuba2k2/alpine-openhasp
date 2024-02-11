@@ -14,7 +14,6 @@ jobs:
         arch:
           - x86
           - x86_64
-          - armhf
           - armv7
           - aarch64
     secrets:

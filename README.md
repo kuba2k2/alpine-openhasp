@@ -6,7 +6,7 @@ openHASP built from the [kuba2k2/openHASP](https://github.com/kuba2k2/openHASP) 
 
 ## Installation
 
-There are prebuilt APK packages available in this repo (for `x86`, `x86_64`, `armhf`, `armv7` and `aarch64`). They are signed with the following public key:
+There are prebuilt APK packages available in this repo (for `x86`, `x86_64`, `armv7` and `aarch64`). They are signed with the following public key:
 
 <details>
 <summary>Click to show public key</summary>
