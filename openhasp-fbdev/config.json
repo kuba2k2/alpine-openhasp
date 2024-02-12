@@ -1,6 +1,6 @@
 {
 	"mqtt": {
-		"host": "localhost",
+		"host": "",
 		"port": 1883,
 		"user": "",
 		"pass": "",
@@ -18,15 +18,15 @@
 			"event0"
 		],
 		"bldev": "",
-		"blmax": 1000
+		"blmax": 0
 	},
 	"hasp": {
 		"startdim": 255,
-        "startpage": 1,
-        "theme": 2,
-        "color1": "#c86464",
-        "color2": "#c86464",
-        "font": "",
+		"startpage": 1,
+		"theme": 2,
+		"color1": "#c86464",
+		"color2": "#c86464",
+		"font": "",
 		"pages": "/pages.jsonl"
 	}
 }

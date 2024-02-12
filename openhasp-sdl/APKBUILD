@@ -2,7 +2,7 @@
 # Maintainer:
 pkgname=openhasp-sdl
 pkgver=0.1.0
-pkgrel=0
+pkgrel=1
 pkgdesc="HomeAutomation Switchplate based on lvgl (SDL2 frontend)"
 url="https://github.com/kuba2k2/openHASP"
 arch="all"
@@ -13,10 +13,10 @@ checkdepends=""
 install=""
 subpackages=""
 source="
-	${pkgname}-${pkgver}.tar.gz::https://github.com/kuba2k2/openHASP/archive/d77428db54b129b6cafef65e1e6691909d03c640.tar.gz
+	${pkgname}-${pkgver}.tar.gz::https://github.com/kuba2k2/openHASP/archive/b0969892fdae9e01688f51c9bc079971a7ba8e9e.tar.gz
 	platformio_override.ini
 	"
-builddir="${srcdir}/openHASP-d77428db54b129b6cafef65e1e6691909d03c640"
+builddir="${srcdir}/openHASP-b0969892fdae9e01688f51c9bc079971a7ba8e9e"
 options="!check"
 
 build() {
@@ -31,6 +31,6 @@ package() {
 
 
 sha512sums="
-b159ffd49247b9b369b3c2a4c78aff7a3995115296a98503497d7afc88be1dd2181225581164fa8a344b3555a9c6d922f3e70ab8dad57c6084e5fa68623d4247  openhasp-sdl-0.1.0.tar.gz
+6ee2a2db1b2746c7b7c8707530b7ef048f123879b2be96114dbf2e4fbbe369448482023d6691e3a618192df44a67aa8fd93ed34b75580b5dba0eb0e700cab088  openhasp-sdl-0.1.0.tar.gz
 da922e3d9f8ce7fe1e127891b5d25de8936b61316565273a276861d7f572bd331163e15df13f15a32932c73ecc1a406708b5054cba2ad11b320bd7f591b8e7f8  platformio_override.ini
 "

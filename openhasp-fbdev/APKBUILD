@@ -2,7 +2,7 @@
 # Maintainer:
 pkgname=openhasp-fbdev
 pkgver=0.1.0
-pkgrel=0
+pkgrel=1
 pkgdesc="HomeAutomation Switchplate based on lvgl (fbdev frontend)"
 url="https://github.com/kuba2k2/openHASP"
 arch="all"
@@ -13,13 +13,13 @@ checkdepends=""
 install="${pkgname}.pre-deinstall"
 subpackages=""
 source="
-	${pkgname}-${pkgver}.tar.gz::https://github.com/kuba2k2/openHASP/archive/d77428db54b129b6cafef65e1e6691909d03c640.tar.gz
+	${pkgname}-${pkgver}.tar.gz::https://github.com/kuba2k2/openHASP/archive/b0969892fdae9e01688f51c9bc079971a7ba8e9e.tar.gz
 	${pkgname}.initd
 	platformio_override.ini
 	config.json
 	pages.jsonl
 	"
-builddir="${srcdir}/openHASP-d77428db54b129b6cafef65e1e6691909d03c640"
+builddir="${srcdir}/openHASP-b0969892fdae9e01688f51c9bc079971a7ba8e9e"
 options="!check"
 
 build() {
@@ -42,9 +42,9 @@ package() {
 
 
 sha512sums="
-b159ffd49247b9b369b3c2a4c78aff7a3995115296a98503497d7afc88be1dd2181225581164fa8a344b3555a9c6d922f3e70ab8dad57c6084e5fa68623d4247  openhasp-fbdev-0.1.0.tar.gz
+6ee2a2db1b2746c7b7c8707530b7ef048f123879b2be96114dbf2e4fbbe369448482023d6691e3a618192df44a67aa8fd93ed34b75580b5dba0eb0e700cab088  openhasp-fbdev-0.1.0.tar.gz
 92c3cc76099f2efaeb68103c88415b77d722c12fa2ae3a74f9a80b643a4a8b8cd977fa22579fa57586d0f89bacda75b75d90358a2d971b6a6381206eae39fab0  openhasp-fbdev.initd
 af0b1815e391b5370ab76a19057c631c0c85f532ce7996215cdd4f89ab4a26a36e380c2e56987cd870bb85e17cbef78173f2172bb0b113d8661298abbcf414dc  platformio_override.ini
-5b579a305912c5e19804d41045e3cf8110bd964794f243438aee201dbb534b8fe23863827b23df61bfdda7c8be9e47cb3293bd689cfc040ffd37e1a7dfea7eba  config.json
+6b20824ff8aab223f1b85e63efb216d7a2c10317fd44d1cded7a44e1a06621acc2c2851fdbea80ca67aadd198172525ff6a92a3710bb996ce64b616f597be891  config.json
 80a941a2778429b5246faea2cb33b316d551e2320b12c4276062285d300827f198aff9e2279bd4acd0988a80f33f28ceebedfba50bd6dd90c5f9961f689d57de  pages.jsonl
 "
